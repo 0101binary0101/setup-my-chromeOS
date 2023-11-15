@@ -36,8 +36,8 @@ wget https://download.jetbrains.com/python/pycharm-community-2023.2.5.tar.gz
 mkdir pycharm && tar -xvf pycharm-community-*.tar.gz -C pycharm --strip-components 1
 rm pycharm-community-2023.2.5.tar.gz
 sudo mv pycharm /opt/pycharm
-wget pycharm-launch.desktop
 # Create the Desktop Launcher
+wget https://raw.githubusercontent.com/0101binary0101/setup-my-chromeOS/main/pycharm-launch.desktop
 sudo mv pycharm-launch.desktop /usr/share/applications/
 
 #
