@@ -30,6 +30,17 @@ sudo apt update && sudo apt install code
 sudo apt install dolphin
 
 #
+# PyCharm
+#
+wget https://download.jetbrains.com/python/pycharm-community-2023.2.5.tar.gz
+mkdir pycharm && tar -xvf pycharm-community-*.tar.gz -C pycharm --strip-components 1
+rm pycharm-community-2023.2.5.tar.gz
+sudo mv pycharm /opt/pycharm
+wget pycharm-launch.desktop
+# Create the Desktop Launcher
+sudo mv pycharm-launch.desktop /usr/share/applications/
+
+#
 # Remmina RDP and SSH environment
 # Remmina comes in the stable Linux environment.
 sudo apt install remmina 
@@ -38,3 +49,4 @@ mkdir -p ~/.local/share/
 if [ -d ~/.local/share/remmina ]; then mv ~/.local/share/remmina ~/.local/share/remmina.local; fi
 ln -s /mnt/chromeos/GoogleDrive/MyDrive/ChromeOS/_local/share/remmina/ ~/.local/share/remmina
 
+##
