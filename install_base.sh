@@ -24,6 +24,10 @@ wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add
 sudo add-apt-repository "deb [arch=amd64,arm64,armhf] http://packages.microsoft.com/repos/code stable main"
 sudo apt update && sudo apt install code
 
+#
+# Linux Folder Browser - helps with navigation of Linux environment.
+#
+sudo apt install dolphin
 
 #
 # Remmina RDP and SSH environment
@@ -33,3 +37,4 @@ sudo apt install remmina
 mkdir -p ~/.local/share/
 if [ -d ~/.local/share/remmina ]; then mv ~/.local/share/remmina ~/.local/share/remmina.local; fi
 ln -s /mnt/chromeos/GoogleDrive/MyDrive/ChromeOS/_local/share/remmina/ ~/.local/share/remmina
+
