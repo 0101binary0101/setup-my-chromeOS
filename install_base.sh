@@ -19,7 +19,9 @@ sudo apt update && sudo apt install google-cloud-sdk
 ## This will throw your browser window to authenticate the login
 gcloud auth login --enable-gdrive-access
 
+#
 # Install Microsoft vscode
+#
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64,arm64,armhf] http://packages.microsoft.com/repos/code stable main"
 sudo apt update && sudo apt install code
@@ -28,6 +30,11 @@ sudo apt update && sudo apt install code
 # Linux Folder Browser - helps with navigation of Linux environment.
 #
 sudo apt install dolphin
+
+#
+# Seahorse for managing secrets and keyrings
+#
+sudo apt install seahorse
 
 #
 # PyCharm
@@ -43,7 +50,7 @@ sudo mv pycharm-launch.desktop /usr/share/applications/
 #
 # Remmina RDP and SSH environment
 # Remmina comes in the stable Linux environment.
-sudo apt install remmina 
+sudo apt install remmina remmina-plugin-secret remmina-plugin-rdp remmina-common remmina-plugin-vnc
 # Move the default remmina directory out the way and then Link my global shared directory with my local environment.
 mkdir -p ~/.local/share/
 if [ -d ~/.local/share/remmina ]; then mv ~/.local/share/remmina ~/.local/share/remmina.local; fi
