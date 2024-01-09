@@ -19,6 +19,12 @@ sudo apt update && sudo apt install google-cloud-sdk
 ## This will throw your browser window to authenticate the login
 gcloud auth login --enable-gdrive-access
 
+
+#
+# Base tools for networking tools (nslookup) and data transfers
+#
+sudo apt install rsync dnsutils
+
 #
 # Install Microsoft vscode
 #
