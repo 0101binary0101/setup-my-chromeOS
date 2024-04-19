@@ -5,7 +5,7 @@
 sudo apt-get update
 sudo apt-get upgrade
 
-sudo apt-get install apt-transport-https ca-certificates gnupg software-properties-common apt-utils
+sudo apt-get install apt-transport-https ca-certificates gnupg software-properties-common apt-utils apt-file
 
 # Add Google SDK APT Key 
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google-apt-key.gpg add -
@@ -62,4 +62,7 @@ mkdir -p ~/.local/share/
 if [ -d ~/.local/share/remmina ]; then mv ~/.local/share/remmina ~/.local/share/remmina.local; fi
 ln -s /mnt/chromeos/GoogleDrive/MyDrive/ChromeOS/_local/share/remmina/ ~/.local/share/remmina
 
-##
+## SNMP tools
+sudo add-apt-repository "deb https://deb.debian.org/debian bookworm main non-free"
+sudo apt update && sudo apt install snmp snmp-mibs-downloader
+
