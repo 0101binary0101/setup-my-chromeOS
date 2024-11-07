@@ -66,3 +66,7 @@ ln -s /mnt/chromeos/GoogleDrive/MyDrive/ChromeOS/_local/share/remmina/ ~/.local/
 sudo add-apt-repository "deb https://deb.debian.org/debian bookworm main non-free"
 sudo apt update && sudo apt install snmp snmp-mibs-downloader
 
+
+# graphics tools - gimp and raw reader
+sudo apt update && sudo apt install gimp
+sudo apt update && sudo apt install rawtherapee
